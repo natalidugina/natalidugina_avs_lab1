@@ -83,3 +83,6 @@ chmod 755 claude_monet/hall
 chmod u=rw,g=r,o=r claude_monet/hall/vip_guests
 chmod u=rwx,g=rx,o= archive
 chmod 640 nagiev_call
+git status
+git add . ../lab0.sh
+git commit -m "A directory and file tree with content has been created, and file and directory permissions have been set"
