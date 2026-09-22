@@ -110,3 +110,7 @@ rm claude_monet/hall/vip_guests
 rmdir claude_monet/hall
 rmdir claude_monet/advertising
 rm -r claude_monet/owner_office/advertising_backup
+git status
+git add . ../lab0.sh
+git commit -m "Complete third part"
+git push
