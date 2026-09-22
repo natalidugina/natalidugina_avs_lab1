@@ -95,3 +95,18 @@ ln claude_monet/contracts/supplier_contract claude_monet/contracts/supplier_dupl
 cat claude_monet/owner_office/owner_order claude_monet/chef_office/barinov_reply > claude_monet/owner_office/meeting_notes
 cat claude_monet/kitchen/chef_order >> nagiev_call
 mv claude_monet/advertising/promo_plan archive/promo_final
+ls -lR . | grep '^-' | grep -v 'copy' | sort -k5,5nr | head -n 5
+grep -rhiE 'нагиев|баринов' claude_monet archive | grep -vi 'реклам' | sort -r | head -n 5
+grep -ril 'поставщик' claude_monet/contracts claude_monet/owner_office | wc -l
+(head -q -n 1 claude_monet/contracts/supplier_contract claude_monet/contracts/concert_contract; tail -q -n 1 claude_monet/contracts/supplier_contract claude_monet/contracts/concert_contract) | grep -iE 'поставщик|музыкант|оплат' | sort
+grep -vi 'согласен' claude_monet/owner_office/meeting_notes | grep -iE 'меню|кухн' | sort -r | wc -w
+ls -lR . | grep '^l' | sort -k9,9r
+grep -hi 'реклам' claude_monet/owner_office/advertising_backup/* | grep -v 'Нагиев' | sort | wc -w
+rm claude_monet/owner_office/nagiev_call_copy
+rm owner_contract
+rm claude_monet/owner_office/hall_access
+rm claude_monet/contracts/supplier_duplicate
+rm claude_monet/hall/vip_guests
+rmdir claude_monet/hall
+rmdir claude_monet/advertising
+rm -r claude_monet/owner_office/advertising_backup
